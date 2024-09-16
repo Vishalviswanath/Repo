@@ -1,0 +1,39 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --navey: #180161; /* rgb(24, 1, 97) */
+  --purple: #4f1787; /* rgb(79, 23, 135) */
+  --pink: #eb3678; /* rgb(235, 54, 120) */
+  --orange: #fb773c; /* rgb(251, 119, 60) */
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--purple);
+  margin: 0;
+}
+
+div#root {
+  max-width: 100vmax;
+  height: 100vmin;
+  background: var(--purple);
+  color: whitesmoke;
+}
+
+::-webkit-scrollbar {
+  background-color: var(--navey);
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--pink);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--orange);
+  width: 6px;
+}

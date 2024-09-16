@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Jomhuria&family=Poller+One&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+:root {
+  --sol-yellow: #bb8130; /* solid yellow */
+  --sol-maroon: #40150a; /* solid maroon */
+  --ol-green: #756a34; /* olivegreen */
+  --sol-green: #162a22; /* solid green */
+  --li-maroon: #5b1f0f; /* light maroon */
+  --li-yellow: #ffde59; /* yellow  */
+  --sol-black: black;
+  --li-black: #323232;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #555;
+}
+::-webkit-scrollbar-track {
+  background: #ff914d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ff914d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.sidhead {
+  font-family: 'Jomhuria', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  font-family: 'Poller One', serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.subhead {
+  font-family: 'Red Hat Display', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+body {
+  line-height: 1.5;
+  color-scheme: light dark;
+  background: var(--li-yellow);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0px 25px;
+  font-family: 'Nunito Sans', system-ui;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  /* overflow: hidden; */
+}
+
+button {
+  font-weight: 500;
+  font-style: italic;
+  text-transform: capitalize;
+  font-variant: small-caps;
+  padding: 15px 28px;
+  text-align: center;
+  color: var(--li-yellow);
+  cursor: pointer;
+  border: 2px solid var(--sol-maroon);
+  background: var(--li-maroon);
+  border-radius: 30px;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  letter-spacing: 1px;
+  will-change: transform;
+  transition: transform 0.3s ease-in-out;
+  outline: none;
+}
+
+button:hover,
+button:focus,
+button:active {
+  background: var(--li-yellow);
+  color: var(--sol-maroon);
+  z-index: 1;
+  transition: transform 1s ease-in-out;
+  transform: translateY(-5px);
+}
+
+nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 15px;
+  z-index: 3;
+}
+
+.asidebar {
+  position: absolute;
+  top: -30px;
+  left: -40px;
+  right: -40px;
+  bottom: -30px;
+  background: transparent;
+  z-index: 4;
+  height: 98vh;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s steps(5);
+  color: var(--sol-maroon);
+}
+
+
+main {
+  /* box-sizing: border-box; */
+  position: relative;
+  border-radius: 20px;
+  width: 100%;
+  background: var(--sol-maroon);
+  opacity: 0.9;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.22);
+  /* backdrop-filter: blur(3.5px); */
+  /* -webkit-backdrop-filter: blur(3.5px); */
+  display: flex;
+  flex-wrap: wrap;
+  z-index: -1;
+  color: var(--li-yellow);
+  will-change: transform;
+  transition: transform 1s ease-in-out;
+  height: 80vh;
+  overflow: auto;
+}
+
+.bgimage {
+  position: absolute;
+  color: var(--li-black);
+  opacity: 0.15;
+  top: -150px;
+  left: -30%;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+img {
+  width: 80%;
+  height: 80%;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+main section {
+  width: 100%;
+  padding: 0px 20px;
+  left: 0;
+  flex-grow: 2;
+  box-sizing: border-box;
+  /* overflow-y: auto;
+  height: 80vh; */
+  height: 100%;
+  overflow-y: auto;
+}
+
+section .header {
+  position: relative;
+  text-transform: uppercase;
+  font-size: 4rem;
+  opacity: 0.2;
+  top: -25px;
+  font-style: italic;
+  z-index: 3;
+  margin: 0;
+  padding: 0;
+  text-align: right;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  gap: 5px;
+}
+
+@media (max-width: 2560px) and (min-width: 769px) {
+  .nav-toggle-btn,
+  .sidebar {
+    display: none;
+  }
+  .asidebar {
+    display: none;
+  }
+}
+
+/* Adjust styles for screens 768px and below */
+@media (max-width: 768px) {
+  .navbar {
+    display: none;
+  }
+}
